@@ -7,4 +7,8 @@ class Student < ApplicationRecord
   def self.grades
     Student.order(grade: :desc) 
   end
+
+  def self.highest_grade
+    grades.first
+  end
 end

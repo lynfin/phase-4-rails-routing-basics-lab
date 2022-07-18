@@ -8,4 +8,8 @@ class StudentsController < ApplicationController
         students = Student.grades
         render json: students 
     end
+
+    def highest_grade
+        render json: Student.highest_grade
+    end
 end
